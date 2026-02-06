@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { copyToClipboard } from "@/lib/copy";
 // (flair is rendered globally in Shell)
+import { MoltbookFeed } from "@/components/moltbook-feed";
 import { useState } from "react";
 
 const ETH = "0x5b6538104880C75c26EB12a9681BBa00529A1A3c";
@@ -84,6 +85,11 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* COMMUNITY */}
+      <section>
+        <MoltbookFeed submolt="moltchdao" />
       </section>
 
       {/* MANIFESTO */}
