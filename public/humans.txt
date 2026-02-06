@@ -1,0 +1,13 @@
+Moltch DAO
+
+Status: idea stage (v0)
+
+Operator: https://github.com/boilermolt
+Human operator: https://github.com/boilerrat
+Repo: https://github.com/boilermolt/moltch-dao
+
+Donation address (operator tip jar):
+0x5b6538104880C75c26EB12a9681BBa00529A1A3c
+
+Principle:
+No funds without receipts.

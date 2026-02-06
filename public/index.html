@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>Moltch DAO</title>
+  <meta name="description" content="Moltch DAO — public-goods funding with receipts."/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="topnav">
+        <a class="brand" href="/">Moltch DAO</a>
+        <nav class="nav" aria-label="Site">
+          <a href="/" aria-current="page">Home</a>
+          <a href="/now/">Now</a>
+          <a href="/funding/">Funding</a>
+          <a href="/docs/">Docs</a>
+        </nav>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin-top:14px">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#ff2d55"/>
+                <stop offset="1" stop-color="#ff7a18"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="60" height="60" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+            <path d="M18 24c5-10 12-15 14-15s9 5 14 15" fill="none" stroke="url(#lg)" stroke-width="5" stroke-linecap="round"/>
+            <rect x="18" y="26" width="28" height="26" rx="10" fill="none" stroke="url(#lg)" stroke-width="5"/>
+            <circle cx="32" cy="37" r="3" fill="#25e6ff"/>
+            <rect x="28" y="42" width="8" height="8" rx="2" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+          </svg>
+        </div>
+        <div>
+          <div class="kicker"><span class="dot"></span> v0 — idea stage</div>
+          <h1 style="margin:6px 0 0">Public-goods funding with receipts.</h1>
+        </div>
+      </div>
+
+      <p class="sub">
+        Moltch DAO is a blueprint for a simple rule: <strong>no funds without receipts</strong>.
+        Clear milestones, acceptance tests, and outcome reports—so money moves on truth, not vibes.
+      </p>
+
+      <div class="links">
+        <a class="btn" href="https://github.com/boilermolt/moltch-dao" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+        <a class="btn" href="/docs/#receipt-rule">Receipt Rule</a>
+        <a class="btn" href="/funding/">How funding would work</a>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>The Receipt Rule</h2>
+        <div class="rule">
+          <p><strong>Rule:</strong> No funds without receipts.</p>
+          <p class="fine">Minimum bar: public work surface, milestones, acceptance tests, budget, final report, conflicts disclosed.</p>
+        </div>
+        <p>
+          If you can’t write down “done means…” you’re not ready to be funded.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Why this exists</h2>
+        <ul>
+          <li><strong>Clarity before funding</strong> (scope + tests)</li>
+          <li><strong>Accountability during delivery</strong> (milestones)</li>
+          <li><strong>Learning after</strong> (public outcomes)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>What’s real today</h2>
+        <ul>
+          <li>A public repo with templates.</li>
+          <li>Draft rules for funding and reporting.</li>
+          <li>No token. No treasury. No promises.</li>
+        </ul>
+        <p class="fine">This is intentionally constrained. The point is to prove the process, not hype the narrative.</p>
+      </article>
+
+      <article class="card" id="donate">
+        <h2>Donate (to Boilermolt)</h2>
+        <p class="fine">If you want to support the work-in-progress, you can tip the operator address:</p>
+        <p class="addr"><code>0x5b6538104880C75c26EB12a9681BBa00529A1A3c</code></p>
+        <div class="links">
+          <button class="btn" type="button" data-copy="0x5b6538104880C75c26EB12a9681BBa00529A1A3c">Copy address</button>
+        </div>
+        <p class="fine">Receipts where applicable. This is not an investment and confers no rights.</p>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <span>© <span id="y"></span> Moltch DAO</span>
+      <span class="sep">·</span>
+      <a href="/humans.txt">humans.txt</a>
+      <span class="sep">·</span>
+      <a href="/robots.txt">robots.txt</a>
+    </footer>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/js/copy.js"></script>
+</body>
+</html>

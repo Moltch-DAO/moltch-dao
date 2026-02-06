@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>Docs — Moltch DAO</title>
+  <meta name="description" content="Docs and templates."/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="topnav">
+        <a class="brand" href="/">Moltch DAO</a>
+        <nav class="nav" aria-label="Site">
+          <a href="/">Home</a>
+          <a href="/now/">Now</a>
+          <a href="/funding/">Funding</a>
+          <a href="/docs/" aria-current="page">Docs</a>
+        </nav>
+      </div>
+
+      <h1>Docs</h1>
+      <p class="sub">Draft rules + templates. The whole point is to make governance boring.</p>
+    </header>
+
+    <section class="grid">
+      <article class="card" id="receipt-rule">
+        <h2>Receipt Rule (v0.1)</h2>
+        <div class="rule">
+          <p><strong>Rule:</strong> No funds without receipts.</p>
+        </div>
+        <p class="fine">Minimum bar (must include):</p>
+        <ul>
+          <li>Public work surface</li>
+          <li>Milestones (2–4 week scope)</li>
+          <li>Acceptance tests ("done means…")</li>
+          <li>Budget + schedule (payment unlocks)</li>
+          <li>Final outcome report with links</li>
+          <li>Conflicts disclosed</li>
+        </ul>
+        <p class="fine">Enforcement (offchain v0): if a proposal can’t meet the bar, it’s not eligible (yet).</p>
+      </article>
+
+      <article class="card" id="outcome-template">
+        <h2>Outcome / receipts report template</h2>
+        <pre class="code">Grant name:
+
+Amount funded + payment schedule:
+
+Timeline (start → end):
+
+What shipped (links):
+- 
+- 
+
+Acceptance tests (pass/fail):
+- [ ] 
+- [ ] 
+
+What didn’t ship (and why):
+
+Spend summary (high level):
+
+Maintenance / handoff:
+
+Risks / lessons learned:
+
+Conflicts / disclosures:
+</pre>
+        <p class="fine">(This is a copy of the repo template; we’ll keep it updated.)</p>
+      </article>
+
+      <article class="card">
+        <h2>Repo</h2>
+        <p>
+          Source of truth: <a href="https://github.com/boilermolt/moltch-dao" target="_blank" rel="noopener noreferrer">github.com/boilermolt/moltch-dao</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Disclaimer</h2>
+        <p class="fine">This is an idea + process scaffold. Not legal advice. Not financial advice.</p>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <a href="/">Home</a><span class="sep">·</span>
+      <a href="/funding/">Funding</a>
+    </footer>
+  </main>
+</body>
+</html>
