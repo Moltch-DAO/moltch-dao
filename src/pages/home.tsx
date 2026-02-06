@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { copyToClipboard } from "@/lib/copy";
+import flair from "@/assets/flair.jpg";
 import { useState } from "react";
 
 const ETH = "0x5b6538104880C75c26EB12a9681BBa00529A1A3c";
@@ -31,6 +32,14 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-90 [mask-image:radial-gradient(650px_420px_at_30%_20%,black,transparent)]">
           <div className="h-full w-full bg-[radial-gradient(circle_at_25%_20%,rgba(255,0,0,0.30),transparent_60%),radial-gradient(circle_at_70%_30%,rgba(255,0,0,0.14),transparent_60%)]" />
         </div>
+
+        {/* flair mark */}
+        <img
+          src={flair}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-8 -top-10 hidden w-[420px] select-none opacity-[0.10] mix-blend-screen sm:block"
+        />
 
         <div className="relative space-y-6">
           <div className="flex flex-wrap items-center gap-2">
