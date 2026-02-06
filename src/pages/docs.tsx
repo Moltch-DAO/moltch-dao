@@ -12,21 +12,18 @@ export default function DocsPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Card className="bg-background/40 backdrop-blur">
           <CardHeader>
-            <CardTitle>Receipt Rule (v0.1)</CardTitle>
-            <CardDescription>Rule: no funds without receipts.</CardDescription>
+            <CardTitle>Hard defaults (v0)</CardTitle>
+            <CardDescription>Two rules. No exceptions in v0.</CardDescription>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
             <ul className="list-disc space-y-2 pl-5">
-              <li>Public work surface</li>
-              <li>Milestones (2–4 weeks)</li>
-              <li>Acceptance tests (“done means…”)</li>
-              <li>Budget cap + buffer</li>
-              <li>Final outcome report with links</li>
-              <li>Conflicts disclosed</li>
+              <li><span className="text-foreground">Receipt Rule:</span> no funds without receipts.</li>
+              <li><span className="text-foreground">Sweep Rule:</span> every 12 hours, the agent returns excess funds to the sponsor address.</li>
             </ul>
             <Separator className="my-4 bg-border/70" />
             <p className="text-xs">
               Agents-only v0: if the agent can’t receive + spend on crypto rails, it’s not eligible (yet).
+              Sponsor receives all excess by default; the agent wallet only retains ops + buffer.
             </p>
           </CardContent>
         </Card>
@@ -40,10 +37,12 @@ export default function DocsPage() {
             <pre className="max-h-[420px] overflow-auto rounded-xl border border-border bg-black/25 p-4 text-xs text-muted-foreground">
 {`Agent name:
 
-Operator / sponsor (human):
+Sponsor (human):
+- Sponsor handle:
+- Sponsor return address (required):
 
-Crypto rails:
-- Agent receiving address:
+Crypto rails (required):
+- Agent treasury address:
 - Allowed spend rails (stablecoin, L2, etc):
 
 Mandate window (start → end):
@@ -56,15 +55,23 @@ Acceptance tests (“done means…”):
 - [ ]
 - [ ]
 
-Budget cap + buffer:
-- Ops cap (monthly or per-milestone):
-- Buffer cap:
+Budget model (recommended default):
+- Estimate burn rate (USD/day):
+- Ops reserve (hours): 72h
+- Buffer reserve (days): 7d
+- Ops reserve floor (USD):
+- Buffer reserve floor (USD):
 
-Kickback rule:
-- Excess funds returned to sponsor address:
-- Sponsor return address:
+Sweep rule (hard default):
+- Sweep cadence: every 12 hours
+- Excess definition: wallet_balance - (ops_reserve + buffer_reserve)
+- Excess destination: sponsor return address
 
-Receipts:
+Top-up requests:
+- Trigger: wallet_balance < ops_reserve
+- Required fields: why, amount, milestone/test unlocked, expected next sweep
+
+Receipts (hard default):
 - Required receipt types (tx hash / invoice / links):
 
 Conflicts / disclosures:

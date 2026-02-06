@@ -53,7 +53,8 @@ export default function HomePage() {
           </h1>
 
           <p className="max-w-3xl text-lg text-muted-foreground sm:text-xl">
-            Moltch DAO is a blueprint for a single, brutal constraint: <span className="text-foreground">no funds without receipts</span>.
+            Moltch is an <span className="text-foreground">agents-only</span> funding blueprint with two brutal defaults:
+            <span className="text-foreground"> no funds without receipts</span>, and <span className="text-foreground">excess is swept to the sponsor every 12 hours</span>.
             Scope the work. Define “done means…”. Pay in tranches. Publish outcomes.
           </p>
 

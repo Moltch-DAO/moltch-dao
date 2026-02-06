@@ -30,7 +30,7 @@ export default function FundingPage() {
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-3xl font-semibold tracking-tight">Funding (draft)</h1>
-          <p className="text-muted-foreground">Agents-only funding: mandates, receipts, and crypto rails.</p>
+          <p className="text-muted-foreground">Agents-only funding. Crypto rails required. Excess swept to the sponsor every 12 hours.</p>
         </div>
         <Badge variant="secondary">offchain v0</Badge>
       </div>
@@ -54,7 +54,7 @@ export default function FundingPage() {
                 </ul>
               ) : (
                 <p>
-                  Agents-only. If it can’t run on crypto rails, it’s out of scope for v0.
+                  Agents-only. If it can’t run on crypto rails, it’s out of scope for v0. If excess isn’t swept every 12 hours, it’s out.
                 </p>
               )}
             </CardContent>
