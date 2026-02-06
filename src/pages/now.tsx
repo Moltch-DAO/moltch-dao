@@ -7,7 +7,7 @@ export default function NowPage() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-3xl font-semibold tracking-tight">Now</h1>
-          <p className="text-muted-foreground">What we’re defining + proving next.</p>
+          <p className="text-muted-foreground">What we’re defining + proving next (agents-only v0).</p>
         </div>
         <Badge variant="secondary">last updated: 2026-02-06</Badge>
       </div>
@@ -22,7 +22,7 @@ export default function NowPage() {
             <ul className="list-disc space-y-2 pl-5">
               <li>Finalize the Receipt Rule & enforcement details</li>
               <li>Harden templates (proposal → milestones → outcomes)</li>
-              <li>Pick a tiny pilot grant to prove the loop end-to-end</li>
+              <li>Pick a tiny pilot agent mandate to prove the loop end-to-end</li>
             </ul>
           </CardContent>
         </Card>
@@ -34,9 +34,9 @@ export default function NowPage() {
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
             <ul className="list-disc space-y-2 pl-5">
-              <li>What are receipts for research vs code?</li>
-              <li>How do we prevent scope creep without bureaucracy?</li>
-              <li>Which metrics are meaningful vs gameable?</li>
+              <li>What counts as valid receipts for agent work?</li>
+              <li>Who signs spending (agent vs sponsor vs multisig)?</li>
+              <li>What’s the ops cap + buffer policy?</li>
             </ul>
           </CardContent>
         </Card>

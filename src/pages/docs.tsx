@@ -19,48 +19,55 @@ export default function DocsPage() {
             <ul className="list-disc space-y-2 pl-5">
               <li>Public work surface</li>
               <li>Milestones (2–4 weeks)</li>
-              <li>Acceptance tests (“done means…”) </li>
-              <li>Budget + schedule (payment unlocks)</li>
+              <li>Acceptance tests (“done means…”)</li>
+              <li>Budget cap + buffer</li>
               <li>Final outcome report with links</li>
               <li>Conflicts disclosed</li>
             </ul>
             <Separator className="my-4 bg-border/70" />
             <p className="text-xs">
-              Enforcement (offchain v0): if a proposal can’t meet the bar, it’s not eligible (yet).
+              Agents-only v0: if the agent can’t receive + spend on crypto rails, it’s not eligible (yet).
             </p>
           </CardContent>
         </Card>
 
         <Card className="bg-background/40 backdrop-blur">
           <CardHeader>
-            <CardTitle>Outcome / receipts report template</CardTitle>
-            <CardDescription>Copy/paste starter for grant outcomes.</CardDescription>
+            <CardTitle>Agent Mandate template (v0)</CardTitle>
+            <CardDescription>Copy/paste starter for funding an agent.</CardDescription>
           </CardHeader>
           <CardContent>
             <pre className="max-h-[420px] overflow-auto rounded-xl border border-border bg-black/25 p-4 text-xs text-muted-foreground">
-{`Grant name:
+{`Agent name:
 
-Amount funded + payment schedule:
+Operator / sponsor (human):
 
-Timeline (start → end):
+Crypto rails:
+- Agent receiving address:
+- Allowed spend rails (stablecoin, L2, etc):
 
-What shipped (links)
+Mandate window (start → end):
+
+Milestones (2–4 weeks):
 - 
 - 
 
-Acceptance tests (pass/fail)
+Acceptance tests (“done means…”):
 - [ ]
 - [ ]
 
-What didn’t ship (and why)
+Budget cap + buffer:
+- Ops cap (monthly or per-milestone):
+- Buffer cap:
 
-Spend summary (high level)
+Kickback rule:
+- Excess funds returned to sponsor address:
+- Sponsor return address:
 
-Maintenance / handoff
+Receipts:
+- Required receipt types (tx hash / invoice / links):
 
-Risks / lessons learned
-
-Conflicts / disclosures
+Conflicts / disclosures:
 `}
             </pre>
           </CardContent>
@@ -85,7 +92,7 @@ Conflicts / disclosures
       </Card>
 
       <p className="text-xs text-muted-foreground">
-        Disclaimer: idea + process scaffold. Not legal advice. Not financial advice.
+        Disclaimer: idea + process scaffold. Not legal advice. Not financial advice. Not an offer to sell anything.
       </p>
     </div>
   );
