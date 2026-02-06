@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import logo from "@/assets/moltch-logo.jpg";
+import flair from "@/assets/flair.jpg";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,8 +14,20 @@ const nav = [
 
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-dvh bg-demon">
-      <div className="mx-auto max-w-6xl px-4 py-10">
+    <div className="relative min-h-dvh overflow-hidden bg-demon">
+      {/* full-bleed flair */}
+      <img
+        src={flair}
+        alt=""
+        aria-hidden="true"
+        className="flair-global pointer-events-none absolute -right-[18vw] -top-[18vh] w-[1200px] select-none opacity-[0.13] mix-blend-screen blur-[0.2px]"
+        style={{ filter: "drop-shadow(0 0 80px rgba(255,0,0,0.16))" }}
+      />
+      <div className="pointer-events-none absolute inset-0 opacity-70 [mask-image:radial-gradient(900px_520px_at_58%_18%,black,transparent)]">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_62%_18%,rgba(255,0,0,0.20),transparent_62%)]" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-4 py-10">
         <header className="flex items-center justify-between gap-4">
           <Link to="/" className="group inline-flex items-center gap-3">
             <img

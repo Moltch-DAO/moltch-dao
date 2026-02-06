@@ -76,3 +76,14 @@
 .flair-aggressive {
   animation: moltch-drift 16s ease-in-out infinite;
 }
+
+/* slower, larger motion for background flair */
+@keyframes moltch-float {
+  0% { transform: translate3d(0,0,0) rotate(-8deg) scale(1.04); }
+  50% { transform: translate3d(-28px,20px,0) rotate(-3deg) scale(1.10); }
+  100% { transform: translate3d(0,0,0) rotate(-8deg) scale(1.04); }
+}
+
+.flair-global {
+  animation: moltch-float 22s ease-in-out infinite;
+}
