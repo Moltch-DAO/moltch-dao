@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 8% 3%;
+    --foreground: 0 0% 96%;
+
+    --card: 240 8% 4.5%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 240 8% 4.5%;
+    --popover-foreground: 0 0% 96%;
+
+    /* Moltch red */
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 6% 10%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 70%;
+
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 14%;
+    --input: 240 6% 14%;
+    --ring: 0 100% 50%;
+
+    --radius: 14px;
+
+    --chart-1: 0 100% 50%;
+    --chart-2: 0 90% 55%;
+    --chart-3: 0 75% 45%;
+    --chart-4: 0 65% 40%;
+    --chart-5: 0 55% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* a little moloch-ish atmosphere */
+.bg-demon {
+  background:
+    radial-gradient(900px 650px at 20% 15%, rgba(255,0,0,0.18), transparent 60%),
+    radial-gradient(700px 550px at 80% 30%, rgba(255,0,0,0.10), transparent 65%),
+    radial-gradient(800px 650px at 70% 85%, rgba(255,0,0,0.06), transparent 65%);
+}
+
+.text-blood {
+  text-shadow: 0 0 35px rgba(255,0,0,0.20);
+}
