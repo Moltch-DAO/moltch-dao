@@ -1,25 +1,23 @@
 :root{
-  --bg:#07070a;
-  --panel: rgba(255,255,255,0.045);
+  --bg:#060607;
+  --panel: rgba(255,255,255,0.035);
   --line: rgba(255,255,255,0.10);
   --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.72);
-  --hot:#ff2d55;
-  --hot2:#ff7a18;
-  --cyan:#25e6ff;
-  --shadow: 0 10px 30px rgba(0,0,0,0.55);
+  --muted: rgba(255,255,255,0.70);
+  --red:#ff0000;
+  --redDim: rgba(255,0,0,0.35);
+  --shadow: 0 18px 50px rgba(0,0,0,0.65);
 }
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
   background:
-    radial-gradient(900px 700px at 15% 10%, rgba(255,45,85,0.13), transparent 60%),
-    radial-gradient(800px 600px at 85% 20%, rgba(255,122,24,0.10), transparent 60%),
-    radial-gradient(900px 700px at 80% 90%, rgba(37,230,255,0.07), transparent 60%),
+    radial-gradient(1100px 800px at 18% 18%, rgba(255,0,0,0.14), transparent 62%),
+    radial-gradient(900px 700px at 80% 25%, rgba(255,0,0,0.08), transparent 60%),
     var(--bg);
   color:var(--text);
-  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 a{color:inherit}
 .wrap{max-width: 1040px; margin:0 auto; padding: 46px 20px 30px}
@@ -29,14 +27,17 @@ a{color:inherit}
 .brand{font-weight:700; letter-spacing:-0.01em; text-decoration:none}
 .nav{display:flex; gap:10px; flex-wrap:wrap}
 .nav a{padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.10); background: rgba(0,0,0,0.14); color: rgba(255,255,255,0.78); text-decoration:none}
-.nav a[aria-current="page"]{border-color: rgba(255,45,85,0.45); color: rgba(255,255,255,0.92)}
+.nav a[aria-current="page"]{border-color: var(--redDim); color: rgba(255,255,255,0.92)}
 .nav a:hover{background: rgba(255,255,255,0.06)}
 
-h1{margin: 14px 0 6px; font-size: 44px; letter-spacing:-0.02em}
-.sub{margin:0 0 16px; color:var(--muted); max-width: 70ch}
+h1{margin: 14px 0 6px; font-size: 52px; letter-spacing:-0.02em; font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}
+.sub{margin:0 0 16px; color:var(--muted); max-width: 78ch}
 
-.kicker{display:inline-flex; gap:8px; align-items:center; font-size: 12px; letter-spacing:0.09em; text-transform:uppercase; color: rgba(255,255,255,0.70)}
-.dot{width:8px; height:8px; border-radius:999px; background: var(--cyan); box-shadow: 0 0 18px rgba(37,230,255,0.55)}
+.kicker{display:inline-flex; gap:8px; align-items:center; font-size: 12px; letter-spacing:0.12em; text-transform:uppercase; color: rgba(255,255,255,0.72)}
+.dot{width:7px; height:7px; border-radius:999px; background: var(--red); box-shadow: 0 0 18px rgba(255,0,0,0.55)}
+
+.logo{display:flex; align-items:center; gap:14px; margin-top: 12px}
+.logo__img{width:86px; height:86px; object-fit:contain; border-radius: 18px; background: rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.10); box-shadow: 0 12px 30px rgba(0,0,0,0.55)}
 
 .links{display:flex; gap:10px; flex-wrap:wrap; margin: 12px 0 10px}
 .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius: 12px; border:1px solid var(--line); background: rgba(255,255,255,0.04); text-decoration:none; color:inherit}
@@ -52,7 +53,7 @@ button.btn{cursor:pointer}
 .card ul{margin:0; padding-left: 18px; color: rgba(255,255,255,0.82)}
 .card li{margin:6px 0}
 
-.rule{border-left: 3px solid rgba(255,45,85,0.70); padding-left: 12px; margin: 10px 0}
+.rule{border-left: 3px solid rgba(255,0,0,0.70); padding-left: 12px; margin: 10px 0}
 .code{display:block; padding: 10px 12px; border-radius: 14px; background: rgba(0,0,0,0.22); border: 1px solid rgba(255,255,255,0.12); overflow:auto}
 
 .fine{color: rgba(255,255,255,0.64); font-size: 13px}
@@ -61,6 +62,6 @@ button.btn{cursor:pointer}
 .foot{display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center; padding: 22px 4px 0; color: rgba(255,255,255,0.62)}
 .sep{opacity:0.35}
 
-/* mark */
+/* mark (legacy) */
 .mark{position:relative; width:56px; height:56px}
 .mark svg{display:block; width:56px; height:56px}
