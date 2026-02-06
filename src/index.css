@@ -66,3 +66,13 @@
 .text-blood {
   text-shadow: 0 0 35px rgba(255,0,0,0.20);
 }
+
+@keyframes moltch-drift {
+  0% { transform: translate3d(0,0,0) rotate(-6deg) scale(1.02); }
+  50% { transform: translate3d(-14px,10px,0) rotate(-2deg) scale(1.06); }
+  100% { transform: translate3d(0,0,0) rotate(-6deg) scale(1.02); }
+}
+
+.flair-aggressive {
+  animation: moltch-drift 16s ease-in-out infinite;
+}

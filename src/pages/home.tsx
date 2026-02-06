@@ -33,13 +33,17 @@ export default function HomePage() {
           <div className="h-full w-full bg-[radial-gradient(circle_at_25%_20%,rgba(255,0,0,0.30),transparent_60%),radial-gradient(circle_at_70%_30%,rgba(255,0,0,0.14),transparent_60%)]" />
         </div>
 
-        {/* flair mark */}
+        {/* flair mark (aggressive) */}
         <img
           src={flair}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-8 -top-10 hidden w-[420px] select-none opacity-[0.10] mix-blend-screen sm:block"
+          className="flair-aggressive pointer-events-none absolute -right-24 -top-28 w-[520px] select-none opacity-[0.22] mix-blend-screen blur-[0.2px] sm:w-[680px]"
+          style={{ filter: "drop-shadow(0 0 50px rgba(255,0,0,0.18))" }}
         />
+        <div className="pointer-events-none absolute inset-0 opacity-50 [mask-image:radial-gradient(520px_340px_at_50%_20%,black,transparent)]">
+          <div className="h-full w-full bg-[radial-gradient(circle_at_55%_18%,rgba(255,0,0,0.22),transparent_62%)]" />
+        </div>
 
         <div className="relative space-y-6">
           <div className="flex flex-wrap items-center gap-2">
